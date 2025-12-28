@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Portafolio - Jesus Plata</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="hero">
+    <h1>Jesus D. Plata Castro</h1>
+    <p>Desarrollador Web</p>
+  </header>
+
+  <main>
+    <section class="about">
+        <p>
+        Construyo aplicaciones web enfocadas usando HTML, CSS, JavaScript, React, Tailwind CSS, Python,
+        Django REST Framework y PostgreSQL.
+        </p>
+    </section>
+    <!-- Sección proyectos -->
+    <section id="projects" class="projects">
+      <h2 class="reveal">Proyectos</h2>
+
+      <!-- Proyecto 1: Job Board -->
+        <article class="project-card reveal">
+        <img src="img/iamge.png" alt="Job Board captura" class="project-image">
+
+        <div class="project-content">
+            <h3>Job Board – Plataforma de bolsa de empleo</h3>
+
+            <p>
+            Plataforma de bolsa de empleo con tres tipos de usuarios (candidato, empresa, admin),
+            que permite publicar ofertas, postularse y moderar el contenido en tiempo real.
+            Desarrollada con Django REST Framework, PostgreSQL, React, TypeScript y Tailwind,
+            desplegada en Render y Netlify.
+            </p>
+
+            <ul class="tech-list">
+            <li><strong>Frontend:</strong> React, TypeScript, Vite, Tailwind CSS</li>
+            <li><strong>Backend:</strong> Django, Django REST Framework, PostgreSQL, JWT</li>
+            <li><strong>Infraestructura:</strong> Render (backend + base de datos), Netlify (frontend)</li>
+            <li><strong>Base de datos:</strong> PostgreSQL gestionada en Render (servicio Postgres conectado al Web Service via DATABASE_URL)</li>
+            </ul>
+
+            <div class="links">
+            <a href="https://job-board123.netlify.app/" target="_blank">Ver sitio</a>
+            <a href="https://jobboard-backend-g8kv.onrender.com/api/" target="_blank">Ver API</a>
+            <a href="https://github.com/jplatac18-boop/jobboard-frontend" target="_blank">Repo frontend</a>
+            <a href="https://github.com/jplatac18-boop/jobboard-backend" target="_blank">Repo backend</a>
+            </div>
+
+            <ul class="tech-list" style="margin-top:1rem;">
+            <li><strong>Rol candidato:</strong> Registro/login JWT, búsqueda y filtrado de ofertas, postulaciones con carta y sección “Mis postulaciones”.</li>
+            <li><strong>Rol empresa:</strong> Panel privado, CRUD de sus ofertas, gestión de postulaciones (aceptar/rechazar).</li>
+            <li><strong>Rol admin:</strong> Panel propio en el frontend, gestión de empresas (bloquear/desbloquear) y ofertas (activar/desactivar).</li>
+            </ul>
+        </div>
+        </article>
+
+
+      <!-- para otros proyectos -->
+
+    </section>
+
+  </main>
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+        }
+        });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+    
+</body>
+</html>
