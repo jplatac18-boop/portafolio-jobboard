@@ -7,76 +7,106 @@
 </head>
 <body>
 
-  <header class="hero">
-    <h1>Jesus D. Plata Castro</h1>
-    <p>Desarrollador Web</p>
+  <!-- Barra de navegación -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a href="#top" class="brand">JP</a>
+      <nav class="nav-links">
+        <a href="#about">Sobre mí</a>
+        <a href="#projects">Proyecto JobBoard</a>
+        <a href="#contact">Contacto</a>
+      </nav>
+    </div>
   </header>
 
+  <!-- Hero -->
+  <section id="top" class="hero">
+    <p class="hero-pill">Desarrollador Web · Backend & Frontend</p>
+    <h1>Jesus D. Plata Castro</h1>
+    <p class="hero-subtitle">
+      Desarrollo aplicaciones web completas con énfasis en experiencia de usuario, APIs robustas
+      y despliegues listos para producción.
+    </p>
+  </section>
+
   <main>
-    <section class="about">
-        <p>
-        Construyo aplicaciones web enfocadas usando HTML, CSS, JavaScript, React, Tailwind CSS, Python,
-        Django REST Framework y PostgreSQL.
-        </p>
+    <!-- Sobre mí -->
+    <section id="about" class="about">
+      <h2 class="section-title">Sobre mí</h2>
+      <p>
+        Construyo aplicaciones web usando HTML, CSS, JavaScript, React, Tailwind CSS, Python,
+        Django REST Framework y PostgreSQL. Me interesa crear productos claros, mantenibles
+        y fáciles de usar, desde el diseño de la API hasta la interfaz final.
+      </p>
     </section>
+
     <!-- Sección proyectos -->
     <section id="projects" class="projects">
-      <h2 class="reveal">Proyectos</h2>
+      <p class="section-kicker">Proyecto destacado</p>
+      <h2 class="section-title reveal">JobBoard – Bolsa de empleo completa</h2>
 
       <!-- Proyecto 1: Job Board -->
-        <article class="project-card reveal">
-        <img src="img/iamge.png" alt="Job Board captura" class="project-image">
+      <article class="project-card reveal">
+        <a href="https://job-board123.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-link-overlay"></a>
+
+        <img src="img/iamge.png" alt="Captura de la plataforma JobBoard" class="project-image">
 
         <div class="project-content">
-            <h3>Job Board – Plataforma de bolsa de empleo</h3>
+          <h3>JobBoard – Plataforma de bolsa de empleo</h3>
 
-            <p>
-            Plataforma de bolsa de empleo con tres tipos de usuarios (candidato, empresa, admin),
-            que permite publicar ofertas, postularse y moderar el contenido en tiempo real.
+          <p>
+            Plataforma de empleo con tres tipos de usuarios (candidato, empresa, admin) que permite
+            publicar ofertas, postularse y moderar el contenido en tiempo real.
             Desarrollada con Django REST Framework, PostgreSQL, React, TypeScript y Tailwind,
             desplegada en Render y Netlify.
-            </p>
+          </p>
 
-            <ul class="tech-list">
+          <ul class="tech-list">
             <li><strong>Frontend:</strong> React, TypeScript, Vite, Tailwind CSS</li>
             <li><strong>Backend:</strong> Django, Django REST Framework, PostgreSQL, JWT</li>
             <li><strong>Infraestructura:</strong> Render (backend + base de datos), Netlify (frontend)</li>
-            <li><strong>Base de datos:</strong> PostgreSQL gestionada en Render (servicio Postgres conectado al Web Service via DATABASE_URL)</li>
-            </ul>
+            <li><strong>Base de datos:</strong> PostgreSQL gestionada en Render mediante <code>DATABASE_URL</code></li>
+          </ul>
 
-            <div class="links">
-            <a href="https://job-board123.netlify.app/" target="_blank">Ver sitio</a>
-            <a href="https://jobboard-backend-g8kv.onrender.com/api/" target="_blank">Ver API</a>
-            <a href="https://github.com/jplatac18-boop/jobboard-frontend" target="_blank">Repo frontend</a>
-            <a href="https://github.com/jplatac18-boop/jobboard-backend" target="_blank">Repo backend</a>
-            </div>
+          <ul class="impact-list">
+            <li>3 roles con permisos diferenciados (candidato, empresa, admin) y flujos protegidos.</li>
+            <li>Autenticación JWT con refresh tokens y paneles privados para empresa y candidato.</li>
+            <li>Panel de administración para bloquear empresas y activar/desactivar ofertas.</li>
+          </ul>
 
-            <ul class="tech-list" style="margin-top:1rem;">
-            <li><strong>Rol candidato:</strong> Registro/login JWT, búsqueda y filtrado de ofertas, postulaciones con carta y sección “Mis postulaciones”.</li>
-            <li><strong>Rol empresa:</strong> Panel privado, CRUD de sus ofertas, gestión de postulaciones (aceptar/rechazar).</li>
-            <li><strong>Rol admin:</strong> Panel propio en el frontend, gestión de empresas (bloquear/desbloquear) y ofertas (activar/desactivar).</li>
-            </ul>
+          <div class="links">
+            <a href="https://job-board123.netlify.app/" target="_blank" rel="noopener noreferrer">Ver sitio</a>
+            <a href="https://jobboard-backend-g8kv.onrender.com/api/" target="_blank" rel="noopener noreferrer">Ver API</a>
+            <a href="https://github.com/jplatac18-boop/jobboard-frontend" target="_blank" rel="noopener noreferrer">Repo frontend</a>
+            <a href="https://github.com/jplatac18-boop/jobboard-backend" target="_blank" rel="noopener noreferrer">Repo backend</a>
+          </div>
         </div>
-        </article>
-
-
-      <!-- para otros proyectos -->
-
+      </article>
     </section>
 
+    <!-- Contacto -->
+    <section id="contact" class="contact">
+      <h2 class="section-title">Contacto</h2>
+      <p>Si te interesa este proyecto o quieres hablar de una posible colaboración:</p>
+      <div class="contact-links">
+        <a href="mailto:jplata.dev@example.com">Correo</a>
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/jplatac18-boop" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </section>
   </main>
+
   <script>
     const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+      entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
         }
-        });
+      });
     }, { threshold: 0.2 });
 
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-    </script>
-    
+  </script>
 </body>
 </html>
