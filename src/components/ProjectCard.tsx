@@ -1,23 +1,30 @@
+import { motion } from "framer-motion";
+
 type ProjectCardProps = {
   image: string;
 };
 
 export function ProjectCard({ image }: ProjectCardProps) {
   return (
-    <article
+    <motion.article
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.7, ease: "easeOut" }}
       className="
         group relative flex flex-col lg:flex-row gap-6 
         bg-slate-900/80 border border-sky-700/60 rounded-3xl overflow-hidden 
         shadow-[0_18px_40px_rgba(0,0,0,0.7)] 
         transition-transform duration-300 ease-out
         hover:-translate-y-2 hover:shadow-[0_26px_70px_rgba(0,0,0,0.85)]
+        max-w-6xl mx-auto
       "
     >
       {/* banda/accent */}
       <div className="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-sky-400 via-sky-300 to-cyan-400" />
 
       {/* Imagen */}
-      <div className="relative flex-1 min-h-[260px] lg:min-h-[320px] overflow-hidden">
+      <div className="relative flex-1 min-h-[220px] sm:min-h-[260px] lg:min-h-[320px] overflow-hidden">
         <img
           src={image}
           alt="Captura de la plataforma JobBoard"
@@ -41,7 +48,7 @@ export function ProjectCard({ image }: ProjectCardProps) {
       </div>
 
       {/* Contenido */}
-      <div className="relative flex-1 px-6 py-6 lg:px-8 lg:py-8">
+      <div className="relative flex-1 px-4 sm:px-6 lg:px-8 py-6 lg:py-8">
         <h3 className="text-xl md:text-2xl font-semibold mb-3">
           JobBoard – Plataforma de bolsa de empleo
         </h3>
@@ -149,17 +156,7 @@ export function ProjectCard({ image }: ProjectCardProps) {
             </a>
           ))}
         </div>
-
-        {/* overlay global clickeable (opcional, puedes quitarlo si molesta los botones) */}
-        {/* 
-        <a
-          href="https://job-board123.netlify.app/"
-          target="_blank"
-          rel="noreferrer"
-          className="absolute inset-0 z-0"
-        />
-        */}
       </div>
-    </article>
+    </motion.article>
   );
 }

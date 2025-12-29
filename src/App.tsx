@@ -7,6 +7,8 @@ import { Contact } from "./components/Contact";
 
 import { featuredProject } from "./data/projects";
 import { dataProjects } from "./data/dataProjects";
+import { motion } from "framer-motion";
+import { Stack } from "./components/Stack"
 
 export default function App() {
   return (
@@ -15,10 +17,16 @@ export default function App() {
       <Hero />
       <main>
         <About />
+        <Stack />
 
-        <section
+        {/* Proyecto destacado */}
+        <motion.section
           id="projects"
-          className="max-w-6xl mx-auto px-6 py-12 space-y-4"
+          className="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-12 space-y-4"
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6, delay: 0.05 }}
         >
           <p className="uppercase text-xs tracking-[0.15em] text-slate-300">
             Proyecto destacado
@@ -27,9 +35,16 @@ export default function App() {
             JobBoard – Bolsa de empleo completa
           </h2>
           <ProjectCard image={featuredProject.image} />
-        </section>
+        </motion.section>
 
-        <section className="max-w-5xl mx-auto px-6 pb-12">
+        {/* Otros proyectos */}
+        <motion.section
+          className="max-w-5xl mx-auto px-4 sm:px-6 pb-10 sm:pb-12"
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+        >
           <p className="uppercase text-xs tracking-[0.15em] text-slate-300 mb-1">
             Otros proyectos
           </p>
@@ -41,7 +56,7 @@ export default function App() {
               <DataProjectCard key={p.title} {...p} />
             ))}
           </div>
-        </section>
+        </motion.section>
 
         <Contact />
       </main>
