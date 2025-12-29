@@ -121,7 +121,7 @@ export function ProjectCard({ image }: ProjectCardProps) {
         <div className="flex flex-wrap gap-2">
           {[
             {
-              href: "https://job-board123.netlify.app/",
+              href: "https://jobboard-frontend-lcmk.vercel.app/",
               label: "Ver sitio",
             },
             {
