@@ -4,8 +4,6 @@ import {
   SiTypescript,
   SiVite,
   SiTailwindcss,
-  SiDjango,
-  SiPostgresql,
   SiGit,
   SiGithub,
   SiRender,
@@ -15,14 +13,12 @@ type LearningProjectCardProps = {
   image: string;
   demoUrl: string;
   frontendRepo: string;
-  backendRepo: string;
 };
 
 export function LearningProjectCard({
   image,
   demoUrl,
   frontendRepo,
-  backendRepo,
 }: LearningProjectCardProps) {
   return (
     <motion.article
@@ -35,18 +31,18 @@ export function LearningProjectCard({
       <div className="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-sky-400 via-sky-300 to-cyan-400" />
 
       {/* Imagen */}
-      <div className="relative flex-1 min-h-[260px] sm:min-h-[320px] lg:min-h-[360px] overflow-hidden bg-slate-900">
+      <div className="relative flex-1 min-h-[220px] sm:min-h-[260px] lg:min-h-[320px] overflow-hidden">
         <img
           src={image}
-          alt="Captura de la plataforma Learning Platform"
-          className="w-full h-full object-cover md:object-contain md:p-4 transition-transform duration-500 group-hover:scale-[1.02]"
+          alt="Captura del panel financiero personal"
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
         />
       </div>
 
       {/* Contenido */}
       <div className="relative flex-1 px-4 sm:px-6 lg:px-8 py-6 lg:py-8">
         <h3 className="text-xl md:text-2xl font-semibold mb-3">
-          Learning Platform – Academia online full‑stack
+          Learning Platform – Academia online frontend
         </h3>
 
         {/* badges */}
@@ -63,12 +59,6 @@ export function LearningProjectCard({
           <span className="px-2.5 py-1 rounded-full bg-sky-900/70 text-sky-200 border border-sky-500/60 inline-flex items-center gap-1.5">
             <SiTailwindcss className="text-sky-300" /> Tailwind CSS
           </span>
-          <span className="px-2.5 py-1 rounded-full bg-emerald-900/70 text-emerald-200 border border-emerald-500/60 inline-flex items-center gap-1.5">
-            <SiDjango className="text-emerald-300" /> Django REST
-          </span>
-          <span className="px-2.5 py-1 rounded-full bg-emerald-900/70 text-emerald-200 border border-emerald-500/60 inline-flex items-center gap-1.5">
-            <SiPostgresql className="text-sky-300" /> PostgreSQL
-          </span>
           <span className="px-2.5 py-1 rounded-full bg-slate-900/70 text-slate-200 border border-slate-500/60 inline-flex items-center gap-1.5">
             <SiGit className="text-orange-300" /> Git
           </span>
@@ -81,25 +71,25 @@ export function LearningProjectCard({
         </div>
 
         <p className="text-sm md:text-[0.95rem] mb-3 opacity-95 leading-relaxed max-w-xl">
-          Plataforma de cursos online con roles de estudiante, instructor y
-          admin que gestiona inscripción a cursos, módulos y lecciones,
-          seguimiento de progreso y quizzes básicos.
+          Plataforma de cursos online centrada en el frontend, con flujo de
+          estudiante para explorar catálogo, inscribirse, navegar por módulos y
+          lecciones y realizar quizzes básicos, construida con React,
+          TypeScript, Vite y Tailwind CSS y desplegada en Render como SPA.
         </p>
 
         <ul className="text-xs md:text-sm space-y-1.5 mb-5">
           <li>
-            <strong>Arquitectura:</strong> frontend en React + TypeScript + Vite
-            y backend REST con Django + DRF sobre PostgreSQL.
+            <strong>Arquitectura:</strong> single page application con React +
+            TypeScript + Vite, gestión de rutas y estado en el cliente.
           </li>
           <li>
-            <strong>Flujos clave:</strong> registro/login con roles, catálogo de
-            cursos, inscripción, consumo de contenido, quizzes y dashboard de
-            progreso.
+            <strong>Experiencia de usuario:</strong> navegación por cursos,
+            módulos y lecciones, marcador de progreso y feedback inmediato en
+            quizzes.
           </li>
           <li>
-            <strong>Despliegue:</strong> frontend y API desplegados en Render
-            con PostgreSQL gestionado y variables de entorno para configuración
-            segura.
+            <strong>Despliegue:</strong> build estático servido desde Render,
+            configurado para proyectos Vite.
           </li>
         </ul>
 
@@ -107,7 +97,6 @@ export function LearningProjectCard({
           {[
             { href: demoUrl, label: "Ver demo" },
             { href: frontendRepo, label: "Repo frontend" },
-            { href: backendRepo, label: "Repo backend" },
           ].map((link) => (
             <a
               key={link.href}

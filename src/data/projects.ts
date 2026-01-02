@@ -9,8 +9,7 @@ export const financeProject = {
 };
 
 export const learningProject = {
-  image: "/img/cap.png", 
+  image: "/img/cap.png",
   demoUrl: "https://learning-platform-frontend-2ln5.onrender.com",
   frontendRepo: "https://github.com/jplatac18-boop/learning-platform-frontend",
-  backendRepo: "https://github.com/jplatac18-boop/learning-platform-backend",
 };

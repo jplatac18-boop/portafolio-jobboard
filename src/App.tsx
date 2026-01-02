@@ -71,7 +71,6 @@ export default function App() {
             image={learningProject.image}
             demoUrl={learningProject.demoUrl}
             frontendRepo={learningProject.frontendRepo}
-            backendRepo={learningProject.backendRepo}
           />
         </motion.section>
 
