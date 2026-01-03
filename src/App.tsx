@@ -23,25 +23,6 @@ export default function App() {
       <main>
         <Stack />
 
-        {/* JobBoard */}
-        <motion.section
-          id="projects"
-          className="scroll-mt-28 max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-12 space-y-6"
-          initial={{ opacity: 0, y: 25 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6, delay: 0.05 }}
-        >
-          <div className="flex flex-col items-center gap-2">
-            <h2 className="text-xl sm:text-2xl font-semibold tracking-[0.18em] uppercase text-slate-50">
-              Proyectos
-            </h2>
-            <div className="h-[1px] w-16 sm:w-24 bg-gradient-to-r from-transparent via-sky-400 to-transparent" />
-          </div>
-
-          <ProjectCard image={featuredProject.image} />
-        </motion.section>
-
         {/* Panel financiero */}
         <motion.section
           id="finance"
@@ -72,6 +53,25 @@ export default function App() {
             demoUrl={learningProject.demoUrl}
             frontendRepo={learningProject.frontendRepo}
           />
+        </motion.section>
+
+                {/* JobBoard */}
+        <motion.section
+          id="projects"
+          className="scroll-mt-28 max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-12 space-y-6"
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6, delay: 0.05 }}
+        >
+          <div className="flex flex-col items-center gap-2">
+            <h2 className="text-xl sm:text-2xl font-semibold tracking-[0.18em] uppercase text-slate-50">
+              Proyectos
+            </h2>
+            <div className="h-[1px] w-16 sm:w-24 bg-gradient-to-r from-transparent via-sky-400 to-transparent" />
+          </div>
+
+          <ProjectCard image={featuredProject.image} />
         </motion.section>
 
         {/* Otros proyectos */}
