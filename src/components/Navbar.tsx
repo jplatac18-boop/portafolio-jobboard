@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 
 const SECTIONS = [
   { id: "stack", label: "Stack" },
-  { id: "projects", label: "JobBoard" },
   { id: "finance", label: "Panel financiero" },
   { id: "learning", label: "Learning Platform" },
+  { id: "projects", label: "JobBoard" },
   { id: "hotel-booking", label: "Hotel Booking" }, // nueva sección
   { id: "others", label: "Otros proyectos" },
   { id: "contact", label: "Contacto" },
