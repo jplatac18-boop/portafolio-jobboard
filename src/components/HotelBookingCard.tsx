@@ -26,22 +26,22 @@ export function HotelBookingCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.7, ease: "easeOut" }}
-      className="group relative flex flex-col lg:flex-row gap-6 bg-slate-900/80 border border-sky-700/60 rounded-3xl overflow-hidden shadow-[0_18px_40px_rgba(0,0,0,0.7)] transition-transform duration-300 ease-out hover:-translate-y-2 hover:shadow-[0_26px_70px_rgba(0,0,0,0.85)] max-w-6xl mx-auto"
+      className="group relative flex flex-col lg:flex-row gap-5 sm:gap-6 bg-slate-900/80 border border-sky-700/60 rounded-3xl overflow-hidden shadow-[0_18px_40px_rgba(0,0,0,0.7)] transition-transform duration-300 ease-out hover:-translate-y-2 hover:shadow-[0_26px_70px_rgba(0,0,0,0.85)] max-w-6xl mx-auto"
     >
       <div className="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-sky-400 via-sky-300 to-cyan-400" />
 
       {/* Imagen */}
-      <div className="relative flex-1 min-h-[220px] sm:min-h-[260px] lg:min-h-[320px] overflow-hidden">
+      <div className="relative flex-1 min-h-[200px] sm:min-h-[240px] lg:min-h-[320px] overflow-hidden">
         <img
           src={image}
-          alt="Captura del panel financiero personal"
+          alt="Captura de la aplicación Hotel Booking"
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
         />
       </div>
 
       {/* Contenido */}
-      <div className="relative flex-1 px-4 sm:px-6 lg:px-8 py-6 lg:py-8">
-        <h3 className="text-xl md:text-2xl font-semibold mb-3">
+      <div className="relative flex-1 px-4 sm:px-6 lg:px-8 py-5 lg:py-7">
+        <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-3">
           Hotel Booking – Reservas de hoteles
         </h3>
 
@@ -70,13 +70,13 @@ export function HotelBookingCard({
           </span>
         </div>
 
-        <p className="text-sm md:text-[0.95rem] mb-3 opacity-95 leading-relaxed max-w-xl">
+        <p className="text-xs sm:text-sm md:text-[0.95rem] mb-3 opacity-95 leading-relaxed max-w-xl">
           Aplicación de reservas de hotel donde el usuario puede explorar
           alojamientos, ver precios y detalles, filtrar por criterios clave y
-          gestionar sus reservas desde una interfaz moderna responsive.
+          gestionar sus reservas desde una interfaz moderna y responsive.
         </p>
 
-        <ul className="text-xs md:text-sm space-y-1.5 mb-5">
+        <ul className="text-[0.7rem] sm:text-xs md:text-sm space-y-1.5 mb-5">
           <li>
             <strong>Arquitectura:</strong> app construida con Next.js, React y
             TypeScript, con componentes reutilizables y estilos con Tailwind

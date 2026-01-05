@@ -52,24 +52,23 @@ export function Stack() {
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.6 }}
     >
-      <h2 className="text-2xl font-semibold mb-4">
+      <h2 className="text-xl sm:text-2xl font-semibold mb-3">
         Tecnologías con las que trabajo
       </h2>
-      <p className="text-sm sm:text-base mb-6 max-w-2xl">
+      <p className="text-xs sm:text-sm md:text-base mb-5 sm:mb-6 max-w-2xl">
         Este portafolio y los proyectos destacados están construidos con un
-        stack moderno orientado a desarrollo web: React + TypeScript en el
-        frontend y Python + PostgreSQL en el backend, usando herramientas de
-        estado, datos y testing.
+        stack moderno orientado a desarrollo web, combinando herramientas para
+        la interfaz, la lógica de negocio, los datos y el testing.
       </p>
 
-      <div className="rounded-3xl bg-slate-900/70 border border-sky-700/40 p-5 sm:p-6 shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
-        <div className="flex flex-wrap gap-3">
+      <div className="rounded-3xl bg-slate-900/70 border border-sky-700/40 p-4 sm:p-5 md:p-6 shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+        <div className="flex flex-wrap gap-2.5 sm:gap-3">
           {tech.map((t) => (
             <span
               key={t.name}
-              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-800 text-[0.75rem] text-slate-100 border border-slate-600"
+              className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-full bg-slate-800 text-[0.7rem] sm:text-[0.75rem] text-slate-100 border border-slate-600"
             >
-              {t.icon && <span className="text-base">{t.icon}</span>}
+              {t.icon && <span className="text-sm sm:text-base">{t.icon}</span>}
               <span>{t.name}</span>
             </span>
           ))}

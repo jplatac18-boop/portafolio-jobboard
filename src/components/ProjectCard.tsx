@@ -25,7 +25,7 @@ export function ProjectCard({ image }: ProjectCardProps) {
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.7, ease: "easeOut" }}
       className="
-        group relative flex flex-col lg:flex-row gap-6 
+        group relative flex flex-col lg:flex-row gap-5 sm:gap-6 
         bg-slate-900/80 border border-sky-700/60 rounded-3xl overflow-hidden 
         shadow-[0_18px_40px_rgba(0,0,0,0.7)] 
         transition-transform duration-300 ease-out
@@ -37,7 +37,7 @@ export function ProjectCard({ image }: ProjectCardProps) {
       <div className="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-sky-400 via-sky-300 to-cyan-400" />
 
       {/* Imagen */}
-      <div className="relative flex-1 min-h-[220px] sm:min-h-[260px] lg:min-h-[320px] overflow-hidden">
+      <div className="relative flex-1 min-h-[200px] sm:min-h-[240px] lg:min-h-[320px] overflow-hidden">
         <img
           src={image}
           alt="Captura de la plataforma JobBoard"
@@ -52,7 +52,7 @@ export function ProjectCard({ image }: ProjectCardProps) {
             transition-opacity duration-500
           "
         >
-          <div className="absolute bottom-4 left-4 text-xs font-medium text-slate-100">
+          <div className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 text-[0.7rem] sm:text-xs font-medium text-slate-100">
             <p className="px-3 py-1 rounded-full bg-sky-600/90 text-slate-900">
               Ver demo en vivo
             </p>
@@ -61,8 +61,8 @@ export function ProjectCard({ image }: ProjectCardProps) {
       </div>
 
       {/* Contenido */}
-      <div className="relative flex-1 px-4 sm:px-6 lg:px-8 py-6 lg:py-8">
-        <h3 className="text-xl md:text-2xl font-semibold mb-3">
+      <div className="relative flex-1 px-4 sm:px-6 lg:px-8 py-5 lg:py-7">
+        <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-3">
           JobBoard – Plataforma de bolsa de empleo
         </h3>
 
@@ -103,7 +103,7 @@ export function ProjectCard({ image }: ProjectCardProps) {
           </span>
         </div>
 
-        <p className="text-sm md:text-[0.95rem] mb-3 opacity-95 leading-relaxed max-w-xl">
+        <p className="text-xs sm:text-sm md:text-[0.95rem] mb-3 opacity-95 leading-relaxed max-w-xl">
           Plataforma de empleo con tres tipos de usuarios (candidato, empresa,
           admin) que permite publicar ofertas, postularse y moderar el contenido
           en tiempo real. Desarrollada con Django REST Framework, PostgreSQL,
@@ -111,25 +111,25 @@ export function ProjectCard({ image }: ProjectCardProps) {
           Render (backend).
         </p>
 
-        <ul className="text-xs md:text-sm space-y-1.5 mb-3">
+        <ul className="text-[0.7rem] sm:text-xs md:text-sm space-y-1.5 mb-3">
           <li>
-            <strong>Frontend:</strong> React, TypeScript, Vite, Tailwind CSS
+            <strong>Frontend:</strong> React, TypeScript, Vite, Tailwind CSS.
           </li>
           <li>
             <strong>Backend:</strong> Django, Django REST Framework, PostgreSQL,
-            JWT
+            JWT.
           </li>
           <li>
             <strong>Infraestructura:</strong> Render (backend + base de datos),
-            Vercel (frontend)
+            Vercel (frontend).
           </li>
           <li>
             <strong>Base de datos:</strong> PostgreSQL gestionada en Render
-            mediante <code>DATABASE_URL</code>
+            mediante <code>DATABASE_URL</code>.
           </li>
         </ul>
 
-        <ul className="text-xs md:text-sm space-y-1.5 mb-5">
+        <ul className="text-[0.7rem] sm:text-xs md:text-sm space-y-1.5 mb-5">
           <li>
             3 roles con permisos diferenciados (candidato, empresa, admin) y
             flujos protegidos.

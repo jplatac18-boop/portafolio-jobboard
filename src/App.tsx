@@ -2,7 +2,6 @@ import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
 import { ProjectCard } from "./components/ProjectCard";
 import { DataProjectCard } from "./components/DataProjectCard";
-import { Contact } from "./components/Contact";
 import { FinanceProjectCard } from "./components/FinanceProjectCard";
 import { Stack } from "./components/Stack";
 import { LearningProjectCard } from "./components/LearningProjectCard";
@@ -113,7 +112,7 @@ export default function App() {
           </div>
         </motion.section>
 
-        <Contact />
+        
       </main>
     </div>
   );
